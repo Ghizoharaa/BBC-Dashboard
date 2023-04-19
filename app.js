@@ -4,7 +4,8 @@ const app = express()
 //Invocamos a la conexión para la DB
 const conexion = require('./database/db')
 conexion.once('open', ()=> console.log('Conexión exitosa a MongoDB'))
-conexion.on('error', ()=> console.log('El error de conexión es: '+error))
+conexion.on('error', (error) => console.log('The connection error is: ' + error));
+
 
 //AdminBro
 const AdminBro = require('admin-bro')
